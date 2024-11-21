@@ -70,11 +70,13 @@
                     <td><?php echo htmlspecialchars($player['College']); ?></td>
                     <td><?php echo htmlspecialchars($player['Trade Notes']); ?></td>
                     <td>
-                        <a href="updatePlayer.php?id=<?php echo $player['player_id']; ?>" class="btn btn-warning btn-sm">Update</a>
-                        <form method="GET" action="deletePlayer.php" style="display:inline;">
-                            <input type="hidden" name="id" value="<?php echo $player['player_id']; ?>">
-                            <button type="submit" class="btn btn-danger btn-sm" name="deletePlayer">Delete</button>
-                        </form>
+                        <div class="d-flex">
+                            <a href="updatePlayer.php?id=<?php echo $player['player_id']; ?>" class="btn btn-warning btn-sm" style="margin-right: 5px;">Update</a>
+                            <form method="GET" action="deletePlayer.php" style="margin: 0;">
+                                <input type="hidden" name="id" value="<?php echo $player['player_id']; ?>">
+                                <button type="submit" class="btn btn-danger btn-sm" name="deletePlayer">Delete</button>
+                            </form>
+                        </div>
                     </td>
                 </tr>
             <?php endforeach; ?>

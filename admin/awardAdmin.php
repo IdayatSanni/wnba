@@ -68,12 +68,14 @@
                     <td><?php echo htmlspecialchars($award['Awardee']); ?></td>
                     <td><?php echo htmlspecialchars($award['Notes']); ?></td>
                     <td>
+                      <div class="d-flex">
                         <a href="updateAward.php?id=<?php echo $award['award_id']; ?>" class="btn btn-warning btn-sm">Update</a>
-                        <form method="GET" action="deleteAward.php" style="display:inline;">
+                        <form method="GET" action="deleteAward.php" style="display:inline-block;">
                             <input type="hidden" name="id" value="<?php echo $award['award_id']; ?>">
                             <button type="submit" class="btn btn-danger btn-sm" name="deleteAward">Delete</button>
                         </form>
-                    </td>
+                      </div>
+                    </td> 
                 </tr>
             <?php endforeach; ?>
         </tbody>
